@@ -1,0 +1,25 @@
+name,cas,smiles,sensitizer,potency_category,ec3_pct,source,notes
+Beryllium sulfate,7787-56-6,[Be+2].[O-]S(=O)(=O)[O-],yes,1A,0.001,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),"Extreme LLNA sensitizer; inorganic salt, included as an official validation reference chemical"
+5-Chloro-2-methyl-4-isothiazolin-3-one (CMIT),26172-55-4,CN1SC(=CC1=O)Cl,yes,1A,0.009,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),"Extreme LLNA sensitizer; tested as the active ingredient of the 1.2% Kathon CG commercial mixture, not the mixture itself"
+"1,4-Benzoquinone",106-51-4,O=C1C=CC(=O)C=C1,yes,1A,0.0099,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),Extreme LLNA sensitizer
+4-Phenylenediamine (PPD),106-50-3,Nc1ccc(N)cc1,yes,1A,0.11,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),Strong LLNA sensitizer; well-documented hair-dye allergen; LLNA performance-standard reference chemical
+Chlorpromazine,69-09-0,CN(C)CCCN1c2ccccc2Sc2ccc(Cl)cc21,yes,1A,0.14,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),Strong LLNA sensitizer; tested as the HCl salt (CAS 69-09-0); SMILES shown is the free base
+Chloramine T,127-65-1,Cc1ccc(cc1)S(=O)(=O)[N-]Cl.[Na+],yes,1A,0.4,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),Strong LLNA sensitizer
+Formaldehyde,50-00-0,C=O,yes,1A,0.61,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),Strong LLNA sensitizer; also positive in human and guinea-pig data
+2-Mercaptobenzothiazole (MBT),149-30-4,C1=CC=C2C(=C1)NC(=S)S2,yes,1A,1.7,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),Moderate LLNA sensitizer; rubber vulcanization accelerant; also positive in human and guinea-pig data
+Benzyl salicylate,118-58-1,O=C(OCc1ccccc1)c1ccccc1O,yes,1B,2.9,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),Moderate LLNA sensitizer; fragrance ingredient
+1-Thioglycerol,96-27-5,OCC(O)CS,yes,1B,3.6,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),Moderate LLNA sensitizer; structurally similar to glycerol (non-sensitizer) - useful contrast pair
+Dihydroeugenol,2785-87-7,COc1cc(CCC)ccc1O,yes,1B,6.8,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),Moderate LLNA sensitizer; saturated analog of eugenol
+Nickel chloride,7718-54-9,[Ni+2].[Cl-].[Cl-],yes,NC,,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),LLNA false negative (LLNA performance-standard reference chemical); human and guinea-pig positive; assigned moderate potency by expert judgment despite negative LLNA
+Benzyl cinnamate,103-41-3,O=C(OCc1ccccc1)/C=C/c1ccccc1,yes,1B,18.4,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),Weak LLNA sensitizer; fragrance ingredient
+Imidazolidinyl urea,39236-46-9,C(NC(=O)NC1C(=O)NC(=O)N1CO)NC(=O)NC2C(=O)NC(=O)N2CO,yes,1B,24,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),Weak LLNA sensitizer; cosmetic preservative and formaldehyde releaser
+R-Limonene,5989-27-5,CC1=CCC(CC1)C(=C)C,yes,1B,69,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),Weak LLNA sensitizer; SMILES given without stereochemistry (tested as the R-(+) enantiomer)
+Methyl methacrylate,80-62-6,C=C(C)C(=O)OC,yes,1B,90,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),Weak LLNA sensitizer; acrylic monomer
+Glycerol,56-81-5,OCC(O)CO,no,NC,,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),LLNA non-sensitizer; structurally similar to 1-thioglycerol (sensitizer) - useful contrast pair
+"2,4-Dichloronitrobenzene (DCNB)",611-06-3,O=[N+]([O-])c1ccc(Cl)cc1Cl,no,NC,,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),LLNA non-sensitizer; structurally similar to the strong sensitizer DNCB - useful contrast pair
+Benzyl alcohol,100-51-6,OCc1ccccc1,no,NC,,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),LLNA non-sensitizer
+Methyl salicylate,119-36-8,COC(=O)c1ccccc1O,no,NC,,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),LLNA non-sensitizer; LLNA performance-standard reference chemical
+Isopropanol,67-63-0,CC(O)C,no,NC,,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),LLNA non-sensitizer; common negative control solvent
+Dimethyl isophthalate,1459-93-4,COC(=O)c1cccc(C(=O)OC)c1,no,NC,,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),LLNA non-sensitizer
+4-Aminobenzoic acid (PABA),150-13-0,Nc1ccc(cc1)C(=O)O,no,NC,,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),LLNA non-sensitizer
+Xylene (mixed isomers),1330-20-7,Cc1cccc(C)c1,no,NC,95.8,ECVAM/JRC DPRA-hCLAT-MUSST Chemical Selection Report (Table 2),"LLNA false positive (EC3 95.8%, LLNA performance-standard reference chemical); human data negative, so 'sensitizer' here reflects the consensus/human status, not the raw LLNA readout. SMILES shown is m-xylene as a representative isomer of the technical mixture actually tested."
