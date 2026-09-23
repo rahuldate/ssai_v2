@@ -1,0 +1,19 @@
+name,cas,smiles,sensitizer,potency_category,ec3_pct,source,notes
+Pyridine,110-86-1,c1ccncc1,yes,1B,72,Strickland et al. 2015 NICEATM SOT Poster Table 3,Prohapten; weak LLNA sensitizer; QSAR Toolbox read-across misclassified as negative
+Nonanoic acid,112-05-0,CCCCCCCCC(=O)O,yes,1B,35,Strickland et al. 2015 NICEATM SOT Poster Table 3,Weak LLNA sensitizer; no protein-binding alert identified for parent
+Undecylenic acid,112-38-9,C=CCCCCCCCCC(=O)O,yes,1B,19.4,Strickland et al. 2015 NICEATM SOT Poster Table 3,Weak LLNA sensitizer; no protein-binding alert identified for parent
+Propyl gallate,121-79-9,CCCOC(=O)c1cc(O)c(O)c(O)c1,yes,1A,0.32,Strickland et al. 2015 NICEATM SOT Poster Table 3,Strong LLNA sensitizer; also positive in human data
+Benzylidene acetone,122-57-6,CC(=O)/C=C/c1ccccc1,yes,1B,3.7,Strickland et al. 2015 NICEATM SOT Poster Table 3,Moderate LLNA sensitizer; alpha-beta-unsaturated ketone (Michael acceptor); positive in human data
+Oxalic acid,144-62-7,OC(=O)C(=O)O,yes,1A,0.10,Strickland et al. 2015 NICEATM SOT Poster Table 3,Strong LLNA sensitizer; no protein-binding alert identified for parent
+Sodium lauryl sulfate,151-21-3,CCCCCCCCCCCCOS(=O)(=O)[O-].[Na+],yes,1B,3.8,Strickland et al. 2015 NICEATM SOT Poster Table 3,Moderate LLNA sensitizer; common surfactant; LLNA-negative by structural read-across
+Methylisothiazolinone,2682-20-4,CN1C(=O)C=CS1,yes,1A,0.90,Strickland et al. 2015 NICEATM SOT Poster Table 3,Strong LLNA sensitizer; well-documented preservative allergen; positive in human data
+Salicylic acid,69-72-7,O=C(O)c1ccccc1O,yes,1B,12.2,Strickland et al. 2015 NICEATM SOT Poster Table 3,Weak LLNA sensitizer per this source; included as a documented edge case not a consensus classification
+2-Hydroxyethyl acrylate,818-61-1,C=CC(=O)OCCO,yes,1A,0.37,Strickland et al. 2015 NICEATM SOT Poster Table 3,Strong LLNA sensitizer; acrylate Michael acceptor; positive in human data
+Coumarin,91-64-5,O=c1ccc2ccccc2o1,yes,1B,29.6,Strickland et al. 2015 NICEATM SOT Poster Table 3,Weak LLNA sensitizer; fragrance ingredient; positive in human data
+Benzoyl peroxide,94-36-0,O=C(OOC(=O)c1ccccc1)c1ccccc1,yes,1A,0.01,Strickland et al. 2015 NICEATM SOT Poster Table 3,Strong LLNA sensitizer; prohapten; positive in human data
+4-Methoxyacetophenone,100-06-1,COc1ccc(C(C)=O)cc1,no,NC,,Strickland et al. 2015 NICEATM SOT Poster Table 4,LLNA-negative; structural read-across falsely predicted positive
+Ethyl vanillin,121-32-4,CCOc1cc(C=O)ccc1O,no,NC,,Strickland et al. 2015 NICEATM SOT Poster Table 4,LLNA-negative; common fragrance/flavor ingredient
+Vanillin,121-33-5,COc1cc(C=O)ccc1O,no,NC,,Strickland et al. 2015 NICEATM SOT Poster Table 4,LLNA-negative; common fragrance/flavor ingredient
+Aniline,62-53-3,Nc1ccccc1,no,NC,,Strickland et al. 2015 NICEATM SOT Poster Table 4,LLNA mostly negative (4 of 9 tests positive per source; majority negative)
+Saccharin,81-07-2,O=C1c2ccccc2S(=O)(=O)N1,no,NC,,Strickland et al. 2015 NICEATM SOT Poster Table 4,LLNA-negative; common artificial sweetener
+2-Hydroxypropyl methacrylate,923-26-2,C=C(C)C(=O)OCC(C)O,no,NC,,Strickland et al. 2015 NICEATM SOT Poster Table 4,LLNA-negative; positive in human data per source; flagged discordance
