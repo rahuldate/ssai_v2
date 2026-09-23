@@ -41,6 +41,7 @@ _THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 NICEATM_REFERENCE_PATH = os.path.join(_THIS_DIR, "..", "data", "niceatm_reference_18.csv")
 ECVAM_REFERENCE_PATH = os.path.join(_THIS_DIR, "..", "data", "ecvam_dpra_hclat_24.csv")
 OECD_PROFICIENCY_PATH = os.path.join(_THIS_DIR, "..", "data", "oecd_tg442d_proficiency_6.csv")
+<<<<<<< HEAD
 ECVAM_TRANSFER_PATH = os.path.join(_THIS_DIR, "..", "data", "ecvam_dpra_transfer_qualification_6.csv")
 
 # Tiny illustrative demo set — for a zero-setup smoke test only. Deliberately
@@ -55,6 +56,17 @@ Cinnamaldehyde,O=CC=CC1=CC=CC=C1,yes,1B,7.9,Moderate sensitizer; alpha-beta-unsa
 Eugenol,COc1cc(CC=C)ccc1O,yes,1B,10.0,Weak-to-moderate fragrance sensitizer
 Ethanol,CCO,no,NC,,Common negative control solvent
 Sodium chloride,[Na+].[Cl-],no,NC,,Common negative control (inorganic salt)
+=======
+
+# Tiny illustrative demo set (6 compounds) — purely for a zero-setup smoke test.
+DEMO_REFERENCE_CSV = """name,smiles,sensitizer,potency_category,ec3_pct,notes
+DNCB (positive control),O=[N+]([O-])c1ccc(Cl)c(c1)[N+]([O-])=O,yes,1A,0.05,Classic strong LLNA positive control
+Cinnamaldehyde,O=CC=CC1=CC=CC=C1,yes,1B,7.9,Moderate sensitizer; alpha-beta-unsaturated aldehyde
+Eugenol,COc1cc(CC=C)ccc1O,yes,1B,10.0,Weak-to-moderate fragrance sensitizer
+Isopropanol,CC(O)C,no,NC,,Common negative control solvent
+Lactic acid,CC(O)C(=O)O,no,NC,,Common negative control (non-sensitizer)
+Glycerol,C(C(CO)O)O,no,NC,,Common negative control
+>>>>>>> a1c85051a37a249f5dc90a2a3f2a639590693e3f
 """
 
 
@@ -71,7 +83,10 @@ def _load_combined_reference() -> pd.DataFrame:
         _load_csv(NICEATM_REFERENCE_PATH),
         _load_csv(ECVAM_REFERENCE_PATH),
         _load_csv(OECD_PROFICIENCY_PATH),
+<<<<<<< HEAD
         _load_csv(ECVAM_TRANSFER_PATH),
+=======
+>>>>>>> a1c85051a37a249f5dc90a2a3f2a639590693e3f
     ], ignore_index=True)
 
 
@@ -189,12 +204,18 @@ def render_read_across_module():
     st.warning(
         "This is a similarity/read-across engine, not a validated QSAR model. Bundled reference "
         "sets are offered at increasing size: a real 24-compound official validation set spanning "
+<<<<<<< HEAD
         "the full potency range, a real 18-compound hard-case set, a real 6-compound OECD "
         "proficiency set, a real 6-compound non-sensitizer-balancing set, all four combined (54), "
         "and a tiny demo set. Even combined, 54 compounds is not a large or representative "
         "applicability domain — leave-one-out cross-validation on this data is tracked in "
         "validate_read_across.py and the README; re-run it after any change to the reference data. "
         "Upload your own curated set for production use."
+=======
+        "the full potency range, a real 18-compound hard-case set, both combined (42), and a tiny "
+        "demo set. Even combined, 42 compounds is not a large or representative applicability "
+        "domain — upload your own curated set for production use."
+>>>>>>> a1c85051a37a249f5dc90a2a3f2a639590693e3f
     )
 
     if not RDKIT_AVAILABLE:
@@ -205,12 +226,20 @@ def render_read_across_module():
     ref_choice = st.radio(
         "Which reference set do you want to use?",
         [
+<<<<<<< HEAD
             "Combined real reference set (54 compounds: NICEATM + ECVAM x2 + OECD TG442D)",
             "NICEATM/ICCVAM 18-compound set (hard/edge cases, real & cited)",
             "ECVAM/JRC 24-compound set (official DPRA/h-CLAT validation set, real & cited)",
             "OECD TG 442D 6-compound set (official KeratinoSens proficiency substances, real & cited)",
             "ECVAM DPRA transfer 6-compound set (real & cited, adds non-sensitizer balance)",
             "Tiny illustrative demo set (4 compounds, for a quick smoke test)",
+=======
+            "Combined real reference set (48 compounds: NICEATM + ECVAM/JRC + OECD TG442D)",
+            "NICEATM/ICCVAM 18-compound set (hard/edge cases, real & cited)",
+            "ECVAM/JRC 24-compound set (official DPRA/h-CLAT validation set, real & cited)",
+            "OECD TG 442D 6-compound set (official KeratinoSens proficiency substances, real & cited)",
+            "Tiny illustrative demo set (6 compounds, for a quick smoke test)",
+>>>>>>> a1c85051a37a249f5dc90a2a3f2a639590693e3f
             "Upload my own reference CSV",
         ],
     )
@@ -219,10 +248,17 @@ def render_read_across_module():
         ref_df = _load_combined_reference()
         with st.expander("📖 Source & important caveats for this reference set", expanded=True):
             st.markdown(
+<<<<<<< HEAD
                 "Combines four independently sourced, real reference sets (see the individual "
                 "set descriptions below for full citations). Together they span the full LLNA "
                 "potency range — extreme, strong, moderate, weak, and non-sensitizer — rather "
                 "than being weighted toward edge cases alone. Still only 54 compounds: a real "
+=======
+                "Combines three independently sourced, real reference sets (see the individual "
+                "set descriptions below for full citations). Together they span the full LLNA "
+                "potency range — extreme, strong, moderate, weak, and non-sensitizer — rather "
+                "than being weighted toward edge cases alone. Still only 48 compounds: a real "
+>>>>>>> a1c85051a37a249f5dc90a2a3f2a639590693e3f
                 "but modest-sized reference set, not a substitute for a large validated database.\n\n"
                 "**Known cross-source discordance, kept rather than resolved:** salicylic acid appears "
                 "in the NICEATM set as an LLNA-positive weak sensitizer, while the official OECD "
@@ -245,7 +281,11 @@ def render_read_across_module():
                 "read-across method *misclassified* in that study — i.e. this is a curated set of "
                 "**hard/discordant cases**, not a representative random sample."
             )
+<<<<<<< HEAD
     elif ref_choice.startswith("ECVAM/JRC"):
+=======
+    elif ref_choice.startswith("ECVAM"):
+>>>>>>> a1c85051a37a249f5dc90a2a3f2a639590693e3f
         ref_df = _load_csv(ECVAM_REFERENCE_PATH)
         with st.expander("📖 Source & important caveats for this reference set", expanded=True):
             st.markdown(
@@ -279,6 +319,7 @@ def render_read_across_module():
                 "see the Combined set's notes for the salicylic acid discordance in particular).\n"
                 "- 4-Methylaminophenol was tested as its sulfate salt; the SMILES shown is the free base."
             )
+<<<<<<< HEAD
     elif ref_choice.startswith("ECVAM DPRA transfer"):
         ref_df = _load_csv(ECVAM_TRANSFER_PATH)
         with st.expander("📖 Source & important caveats for this reference set", expanded=True):
@@ -297,6 +338,8 @@ def render_read_across_module():
                 "Skin Sens. 1 classification for it — kept visible rather than silently resolved, same "
                 "principle as the salicylic acid discordance noted above."
             )
+=======
+>>>>>>> a1c85051a37a249f5dc90a2a3f2a639590693e3f
     elif ref_choice.startswith("Tiny"):
         ref_df = pd.read_csv(io.StringIO(DEMO_REFERENCE_CSV))
         st.caption(f"Using tiny illustrative demo set — {len(ref_df)} compounds, for smoke-testing only.")

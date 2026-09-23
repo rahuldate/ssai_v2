@@ -323,6 +323,7 @@ def test_fingerprint_uses_non_deprecated_api_and_still_matches_self():
     # Regression guard: after switching from GetMorganFingerprintAsBitVect to
     # rdFingerprintGenerator, self-similarity must still be ~1.0.
     ref_df = pd.read_csv(io.StringIO(DEMO_REFERENCE_CSV))
+<<<<<<< HEAD
     result, err = compute_read_across("CCO", ref_df, k=1, domain_cutoff=0.9)
     assert err is None
     assert result["ranked"][0]["name"] == "Ethanol"
@@ -411,4 +412,9 @@ def test_read_across_works_against_ecvam_transfer_set():
     result, err = compute_read_across("CCCCO", ref_df, k=1, domain_cutoff=0.4)
     assert err is None
     assert result["ranked"][0]["name"] == "1-Butanol"
+=======
+    result, err = compute_read_across("CC(O)C", ref_df, k=1, domain_cutoff=0.9)
+    assert err is None
+    assert result["ranked"][0]["name"] == "Isopropanol"
+>>>>>>> a1c85051a37a249f5dc90a2a3f2a639590693e3f
     assert result["ranked"][0]["similarity"] > 0.99

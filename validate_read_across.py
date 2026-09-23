@@ -35,7 +35,10 @@ def load_combined():
         pd.read_csv(os.path.join(BASE, "niceatm_reference_18.csv")),
         pd.read_csv(os.path.join(BASE, "ecvam_dpra_hclat_24.csv")),
         pd.read_csv(os.path.join(BASE, "oecd_tg442d_proficiency_6.csv")),
+<<<<<<< HEAD
         pd.read_csv(os.path.join(BASE, "ecvam_dpra_transfer_qualification_6.csv")),
+=======
+>>>>>>> a1c85051a37a249f5dc90a2a3f2a639590693e3f
     ], ignore_index=True)
 
 

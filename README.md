@@ -76,7 +76,10 @@ a large validated database — see the in-app caveats for each set.
 | `niceatm_reference_18.csv` | 18 | Strickland et al. 2015 NICEATM SOT poster (NIEHS/NTP, public domain) | Hard/discordant cases a structural read-across method misclassified — not a representative sample |
 | `ecvam_dpra_hclat_24.csv` | 24 | EU JRC/ECVAM DPRA/h-CLAT/MUSST Phase III chemical-selection report (public JRC TSAR archive) | Officially selected to span the full LLNA potency range: extreme → non-sensitizer |
 | `oecd_tg442d_proficiency_6.csv` | 6 | OECD Test Guideline 442D, Annex 2, Table 1 (official regulatory text) | KeratinoSens proficiency substances; 4 of the original 10 overlap with the sets above and were excluded here to avoid duplicates |
+<<<<<<< HEAD
 | `ecvam_dpra_transfer_qualification_6.csv` | 6 | Same ECVAM DPRA Validation Study Report as above, Table 7 (transfer-lab qualification chemicals) | Added specifically to fix a diagnosed sensitizer/non-sensitizer imbalance (33 vs 15 before); contributes 2 more non-sensitizers and 4 more sensitizers |
+=======
+>>>>>>> a1c85051a37a249f5dc90a2a3f2a639590693e3f
 
 Every SMILES in every bundled file has been validated (RDKit can parse it)
 and, wherever the source gave a molecular weight, cross-checked against
@@ -98,6 +101,7 @@ Data validation (SMILES parse, MW cross-checks) is not the same thing as
 model validation (does it predict correctly?) -- conflating those two was
 the core problem with the pre-rebuild version of this app. Run
 `python3 validate_read_across.py` for a reproducible leave-one-out
+<<<<<<< HEAD
 cross-validation of the read-across engine. As of the last run (54-compound
 combined set):
 
@@ -122,6 +126,23 @@ flags already computed in the Structure tab -- untested so far, and it
 should be validated with this same script before being trusted, not assumed
 better. Re-run this script and update this table whenever the reference
 data changes materially.
+=======
+cross-validation of the read-across engine. As of the last run:
+
+| k | similarity cutoff | n scored | accuracy | sensitivity | specificity | MCC |
+|---|---|---|---|---|---|---|
+| 1 | 0.4 | 25 | 0.440 | 0.429 | 0.455 | -0.116 |
+| 3 | 0.4 | 18 | 0.500 | 0.545 | 0.429 | -0.025 |
+| 3 | 0.3 | 26 | 0.538 | 0.625 | 0.400 | 0.025 |
+| 5 | 0.3 | 26 | 0.577 | 0.688 | 0.400 | 0.089 |
+
+**MCC near zero means close to chance performance.** This is not a
+statement that read-across as a method is weak -- it's a measurement of
+*this specific 48-compound bundled set*, which is small and, for 18 of the
+48 compounds, deliberately adversarial (selected because a structural
+method misclassified them in the source study). Re-run this script and
+update this table whenever the reference data changes materially.
+>>>>>>> a1c85051a37a249f5dc90a2a3f2a639590693e3f
 
 ## Deployment notes (Streamlit Community Cloud)
 
