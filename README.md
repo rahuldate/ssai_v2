@@ -49,24 +49,37 @@ packages.txt                    System-level (apt) dependencies — see Deployme
 - **Structure tab**: real RDKit computation on whatever SMILES you enter.
   Structural alerts are simplified SMARTS-based flags for expert review, not
   a standalone prediction.
+<<<<<<< HEAD
 - **WoE tab**: a transparent vote-count rule combining DPRA/KeratinoSens/
   h-CLAT results (OECD GL 497 "defined approach" style). Unlike an earlier
   version of this tool, the DPRA, KeratinoSens, and h-CLAT cutoffs are now
   verified against primary OECD test-guideline text, not assumed defaults —
   see "Cutoff & criterion provenance" below for exactly what was checked.
+=======
+- **WoE tab**: a transparent, editable-cutoff vote-count rule combining
+  DPRA/KeratinoSens/h-CLAT results (OECD GL 497 "defined approach" style).
+  Cutoffs are pre-filled examples — verify against your current SOP.
+>>>>>>> f7dab94e68c5dd76e4d075ea6826a5f1d226bbc5
 - **Read-across tab**: real Tanimoto similarity (RDKit Morgan fingerprints)
   against a reference set. It is explicitly **not** presented as equivalent
   to a validated QSAR toolbox — see Data provenance below for exactly what
   the bundled reference data is and isn't.
+<<<<<<< HEAD
 - **Potency tab**: GHS 1A/1B categorization from a real LLNA EC3 (Path A,
   cutoff corroborated by three independent authoritative sources — see
   below), or a screening-level in-vitro proxy score (Path B) that is *not*
   a GHS-official classification and uses unverified placeholder bands.
+=======
+- **Potency tab**: GHS 1A/1B categorization from a real LLNA EC3 (Path A), or
+  a screening-level in-vitro proxy score (Path B) that is *not* a GHS-official
+  classification — it's a triage signal only.
+>>>>>>> f7dab94e68c5dd76e4d075ea6826a5f1d226bbc5
 - **QRA tab**: the real arithmetic of the Api et al. (2008) dermal
   sensitization QRA framework (AEL = NESIL / SAF; MoS = AEL / CEL).
 - **Export tab**: a PDF that pulls only what was actually computed in-session.
   Steps you skip are labeled "Not run," never filled with a placeholder.
 
+<<<<<<< HEAD
 ## Cutoff & criterion provenance
 
 A running record of which numeric thresholds in this tool have been checked
@@ -85,6 +98,8 @@ this project's history, not that the number merely sounds right.
 | Path B (ITS-style proxy) point bands | NOT independently verified | Loosely inspired by Urbisch et al. (2015); placeholder numbers, edit before use |
 | Read-across reference data | See "Data provenance" below | Four bundled real, cited datasets (54 compounds); LOO-CV validated with honest (near-chance) results |
 
+=======
+>>>>>>> f7dab94e68c5dd76e4d075ea6826a5f1d226bbc5
 ## Data provenance
 
 Read-across needs a reference set to compare against. Three real,
