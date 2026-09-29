@@ -199,3 +199,11 @@ def render_dossier_module():
         type="primary",
         use_container_width=True,
     )
+
+    st.markdown("---")
+    st.markdown("### 🛡️ Human-in-the-Loop (HITL) Decision Gate (v1.2.0)")
+    reviewer_name = st.text_input("Reviewer Name / Toxicology Expert ID")
+    final_approval = st.checkbox("I confirm the weight-of-evidence and read-across rationale support this hazard conclusion.")
+    if final_approval and reviewer_name:
+        st.success(f"Decision Gate validated and signed off by {reviewer_name}.")
+    
