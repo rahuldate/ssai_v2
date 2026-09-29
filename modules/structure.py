@@ -183,3 +183,28 @@ def render_structure_module():
         )
     else:
         st.info("No reactive-mechanism structural alerts matched for this substructure set.")
+
+
+from rdkit import Chem
+
+SKIN_SENS_ALERTS = {
+    "Michael Acceptor (alpha,beta-unsaturated carbonyl)": "[C,c]=[C,c]-[C,c]=O",
+    "Aldehyde / Schiff Base Former": "[CX3H1](=O)[#6]",
+    "SN2 / Aliphatic Halide": "[CX4][Cl,Br,I]",
+    "Epoxide / Ring-Opening": "C1OC1",
+    "Acyl Transfer / Anhydride": "[CX3](=O)[O][CX3](=O)"
+}
+
+def check_mechanistic_alerts(smiles: str):
+    """Scans a target SMILES string against known protein-binding structural alerts."""
+    mol = Chem.MolFromSmiles(smiles)
+    if mol is None:
+        return ["Invalid SMILES structure"]
+    
+    matched_alerts = []
+    for alert_name, smarts in SKIN_SENS_ALERTS.items():
+        pattern = Chem.MolFromSmarts(smarts)
+        if pattern and mol.HasSubstructMatch(pattern):
+            matched_alerts.append(alert_name)
+            
+    return matched_alerts if matched_alerts else ["No classic protein-binding alerts flagged (may act via non-covalent or precursor mechanisms)"]
