@@ -71,3 +71,19 @@ def render_structure_module():
                     st.info(alert)
                 else:
                     st.warning(f"⚠️ Flagged Alert: {alert}")
+
+def analyze_smiles(smiles: str):
+    """Compatibility helper for batch screening and other modules."""
+    from rdkit import Chem
+    mol = Chem.MolFromSmiles(smiles)
+    if mol is None:
+        return {"valid": False, "alerts": ["Invalid SMILES structure"]}
+    
+    info = get_compound_identifiers(smiles)
+    alerts = check_mechanistic_alerts(smiles)
+    return {
+        "valid": True,
+        "name": info["name"],
+        "cas": info["cas"],
+        "alerts": alerts
+    }
