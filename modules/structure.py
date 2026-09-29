@@ -58,7 +58,27 @@ def check_mechanistic_alerts(smiles: str):
 
 def render_structure_module():
     st.subheader("Chemical Structure & Mechanistic Alert Screening")
-    user_smiles = st.text_input("Enter SMILES string:", value="c1cc(c(cc1[N+](=O)[O-])[N+](=O)[O-])Cl")
+    
+    preset_compound = st.selectbox(
+        "Choose a Reference Compound or Enter Custom SMILES:",
+        [
+            "Custom SMILES",
+            "2,4-Dinitrochlorobenzene (DNCB) [c1cc(c(cc1[N+](=O)[O-])[N+](=O)[O-])Cl]",
+            "Cinnamaldehyde [O=CC=CC1=CC=CC=C1]",
+            "Aspirin [CC(=O)OC1=CC=CC=C1C(=O)O]"
+        ]
+    )
+    
+    default_sm = "c1cc(c(cc1[N+](=O)[O-])[N+](=O)[O-])Cl"
+    if "DNCB" in preset_compound:
+        default_sm = "c1cc(c(cc1[N+](=O)[O-])[N+](=O)[O-])Cl"
+    elif "Cinnamaldehyde" in preset_compound:
+        default_sm = "O=CC=CC1=CC=CC=C1"
+    elif "Aspirin" in preset_compound:
+        default_sm = "CC(=O)OC1=CC=CC=C1C(=O)O"
+        
+    user_smiles = st.text_input("Enter SMILES string:", value=default_sm)
+    
     if user_smiles:
         mol = render_mol_preview(user_smiles)
         if mol:
