@@ -1,0 +1,7 @@
+name,cas,smiles,sensitizer,potency_category,ec3_pct,source,notes
+2-Phenylpropionaldehyde,93-53-8,CC(c1ccccc1)C=O,yes,1B,,"ECVAM DPRA Validation Study Report, Table 7 (transfer qualification chemicals)",Moderate sensitizer per in vivo data; also called hydratropaldehyde
+Diethyl maleate,141-05-9,CCOC(=O)C=CC(=O)OCC,yes,1B,,"ECVAM DPRA Validation Study Report, Table 7 (transfer qualification chemicals)",Moderate sensitizer per in vivo data; SMILES without explicit cis/trans stereochemistry
+"2,3-Butanedione (diacetyl)",431-03-8,CC(=O)C(=O)C,yes,1B,,"ECVAM DPRA Validation Study Report, Table 7 (transfer qualification chemicals)",Weak sensitizer per in vivo data; common butter-flavor food chemical
+4-Allylanisole (estragole),140-67-0,COc1ccc(CC=C)cc1,yes,1B,,"ECVAM DPRA Validation Study Report, Table 7 (transfer qualification chemicals)","Weak sensitizer per in vivo data; common fragrance/flavor ingredient (basil, tarragon)"
+1-Butanol,71-36-3,CCCCO,no,NC,,"ECVAM DPRA Validation Study Report, Table 7 (transfer qualification chemicals)",Non-sensitizer per in vivo data; common solvent
+6-Methylcoumarin,92-48-8,CC1=CC=C2OC(=O)C=CC2=C1,no,NC,,"ECVAM DPRA Validation Study Report, Table 7 (transfer qualification chemicals)","Non-sensitizer per in vivo data used in this validation study; note some commercial safety data sheets list a precautionary Skin Sens. 1 GHS classification for this substance, an example of the same kind of cross-source discordance flagged elsewhere in this dataset"
